@@ -256,3 +256,996 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007185s ]
 INFO: [ app_end ] --END-- [ RunTime:0.015639s ]
 
+[ 2017-07-07T11:29:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001245s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021176s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010309s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0197s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0236s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0226s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499398140 AND ( deadline = 0 OR deadline > 1499398140 ) ORDER BY `id` DESC  [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003955s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010851s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0233s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004004s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.587722s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.175153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011288s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0022s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499398140 AND ( deadline = 0 OR deadline > 1499398140 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.428742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001914s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.241699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012824s ]
+
+[ 2017-07-07T11:30:07+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001306s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.025887s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011017s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0192s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0207s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499398205 AND ( deadline = 0 OR deadline > 1499398205 ) ORDER BY `id` DESC  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004321s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011246s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0192s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003814s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.519138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.194373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.202703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011447s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499398205 AND ( deadline = 0 OR deadline > 1499398205 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.444190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.202703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001772s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.238909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014524s ]
+
+[ 2017-07-07T11:31:28+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002974s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.025138s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011810s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0197s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0222s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0212s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499398287 AND ( deadline = 0 OR deadline > 1499398287 ) ORDER BY `id` DESC  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003913s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010829s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0217s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003492s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.453997s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.163729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.170534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004764s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012283s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0019s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499398287 AND ( deadline = 0 OR deadline > 1499398287 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0023s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.392240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.170534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001716s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.215709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010983s ]
+
+[ 2017-07-07T11:36:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002729s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.039161s ]
+INFO: [ app_init ] --END-- [ RunTime:0.058633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017767s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0338s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0672s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0228s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499398613 AND ( deadline = 0 OR deadline > 1499398613 ) ORDER BY `id` DESC  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010652s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0195s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004777s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.521426s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.207762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.217015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004796s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013456s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499398613 AND ( deadline = 0 OR deadline > 1499398613 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0018s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.459938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.217015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001792s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.238039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012669s ]
+
+[ 2017-07-07T11:57:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002100s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.032242s ]
+INFO: [ app_init ] --END-- [ RunTime:0.059209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013952s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0432s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0229s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0217s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499399870 AND ( deadline = 0 OR deadline > 1499399870 ) ORDER BY `id` DESC  [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003858s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011072s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0347s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004094s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.608405s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.213228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017381s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0024s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499399870 AND ( deadline = 0 OR deadline > 1499399870 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0052s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.566748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002775s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.340281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011528s ]
+
+[ 2017-07-07T12:55:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002065s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.026660s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035009s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.3976s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0348s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.1059s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0838s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499403331 AND ( deadline = 0 OR deadline > 1499403331 ) ORDER BY `id` DESC  [ RunTime:0.0172s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010941s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0786s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0158s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0341s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004116s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.852043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.233150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.242271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011062s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0019s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499403331 AND ( deadline = 0 OR deadline > 1499403331 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0398s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.611414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.242271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001819s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.366653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010811s ]
+
+[ 2017-07-07T12:58:02+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001674s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.025487s ]
+INFO: [ app_init ] --END-- [ RunTime:0.051332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010773s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0535s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0214s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0234s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499403480 AND ( deadline = 0 OR deadline > 1499403480 ) ORDER BY `id` DESC  [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005505s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015628s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0185s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0021s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003763s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.466739s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.173139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.180858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012121s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0019s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499403480 AND ( deadline = 0 OR deadline > 1499403480 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.423509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.180858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001832s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.237452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011652s ]
+
+[ 2017-07-07T12:59:23+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002327s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.026006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.044865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023180s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0224s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0227s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0236s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0251s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499403560 AND ( deadline = 0 OR deadline > 1499403560 ) ORDER BY `id` DESC  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003742s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010454s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0585s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0033s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004196s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.547148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.211922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013877s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0023s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499403560 AND ( deadline = 0 OR deadline > 1499403560 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0041s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.485782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.211922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002343s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.274909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013453s ]
+
+[ 2017-07-07T13:04:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001223s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.024989s ]
+INFO: [ app_init ] --END-- [ RunTime:0.039906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011602s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0236s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0264s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0279s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499403849 AND ( deadline = 0 OR deadline > 1499403849 ) ORDER BY `id` DESC  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003956s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011054s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0205s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0019s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004035s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.499269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012351s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0019s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499403849 AND ( deadline = 0 OR deadline > 1499403849 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0024s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.438555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001964s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.235109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012306s ]
+
+[ 2017-07-07T13:06:21+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001602s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010948s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0917s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0226s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0272s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499403979 AND ( deadline = 0 OR deadline > 1499403979 ) ORDER BY `id` DESC  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012288s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0199s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0021s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004054s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.502838s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.191127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011220s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499403979 AND ( deadline = 0 OR deadline > 1499403979 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0027s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.434980s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001728s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.232351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014483s ]
+
+[ 2017-07-07T13:06:33+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001316s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.047413s ]
+INFO: [ app_init ] --END-- [ RunTime:0.068951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017610s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0243s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0238s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0204s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499403991 AND ( deadline = 0 OR deadline > 1499403991 ) ORDER BY `id` DESC  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003989s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012349s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0209s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006365s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.535811s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.232493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.241493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011488s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499403991 AND ( deadline = 0 OR deadline > 1499403991 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0028s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.465990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.241493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001807s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.221898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011339s ]
+
+[ 2017-07-07T13:10:23+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002250s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.089292s ]
+INFO: [ app_init ] --END-- [ RunTime:0.114950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015267s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0447s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0521s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0254s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499404221 AND ( deadline = 0 OR deadline > 1499404221 ) ORDER BY `id` DESC  [ RunTime:0.0051s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005539s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.014286s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0219s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004358s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.489786s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.187055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011143s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499404221 AND ( deadline = 0 OR deadline > 1499404221 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0032s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.473065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001824s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.277738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.040887s ]
+
+[ 2017-07-07T14:04:48+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001204s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022324s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012735s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0496s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0211s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0222s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499407486 AND ( deadline = 0 OR deadline > 1499407486 ) ORDER BY `id` DESC  [ RunTime:0.0215s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.018559s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0511s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005688s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.535369s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.180982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.188613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011640s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499407486 AND ( deadline = 0 OR deadline > 1499407486 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0031s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.438028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.188613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002283s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.245701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014141s ]
+
+[ 2017-07-07T14:22:29+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001737s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.024114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.038936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013321s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0238s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0217s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0249s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499408547 AND ( deadline = 0 OR deadline > 1499408547 ) ORDER BY `id` DESC  [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011158s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0236s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003816s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.484838s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.178308s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009996s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0022s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499408547 AND ( deadline = 0 OR deadline > 1499408547 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0030s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.445781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001737s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.258337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005222s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012773s ]
+
+[ 2017-07-07T14:27:51+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001262s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.036276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012551s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0200s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0367s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0380s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499408869 AND ( deadline = 0 OR deadline > 1499408869 ) ORDER BY `id` DESC  [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003966s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011202s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0226s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0031s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004126s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.532752s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.207328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005824s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015270s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0025s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499408869 AND ( deadline = 0 OR deadline > 1499408869 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0035s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.473528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002061s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.240830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011408s ]
+
+[ 2017-07-07T14:28:09+08:00 ] 127.0.0.1 /index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001266s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020877s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011963s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0222s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010957s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0217s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0021s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.562085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.569050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004820s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014125s ]
+
+[ 2017-07-07T14:28:10+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002623s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.026828s ]
+INFO: [ app_init ] --END-- [ RunTime:0.052733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014367s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0218s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016419s ]
+
+[ 2017-07-07T14:28:14+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html&random=0.33624743412395763
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001193s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020175s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010895s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0193s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011254s ]
+
+[ 2017-07-07T14:28:15+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html&random=0.7246358817610512
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001216s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.019697s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011032s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0189s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011616s ]
+
+[ 2017-07-07T14:38:07+08:00 ] 127.0.0.1 /index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001676s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.047305s ]
+INFO: [ app_init ] --END-- [ RunTime:0.063080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024252s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.1494s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011492s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.1758s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.736826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.743751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.022344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.029841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013025s ]
+
+[ 2017-07-07T14:38:09+08:00 ] 127.0.0.1 /index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002353s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.056092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.078146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018327s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0571s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011844s ]
+
+[ 2017-07-07T17:22:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001214s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.026668s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018103s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0274s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0230s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0667s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499419354 AND ( deadline = 0 OR deadline > 1499419354 ) ORDER BY `id` DESC  [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.017073s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0703s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0146s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003827s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.734323s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.200758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.210865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020958s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499419354 AND ( deadline = 0 OR deadline > 1499419354 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0024s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.615010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.210865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001848s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.389516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016835s ]
+
+[ 2017-07-07T17:23:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.003877s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.030211s ]
+INFO: [ app_init ] --END-- [ RunTime:0.059319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011307s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0193s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0199s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0208s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499419414 AND ( deadline = 0 OR deadline > 1499419414 ) ORDER BY `id` DESC  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011120s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0286s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003811s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.516137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.173011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.180311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011978s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0021s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499419414 AND ( deadline = 0 OR deadline > 1499419414 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `category` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0022s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.467784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.180311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003732s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.288586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012244s ]
+
+[ 2017-07-07T17:25:50+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001886s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022353s ]
+INFO: [ app_init ] --END-- [ RunTime:0.039201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012086s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0221s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0215s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0408s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499419548 AND ( deadline = 0 OR deadline > 1499419548 ) ORDER BY `id` DESC  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.008021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.019607s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0230s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003485s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.482235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.174926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014411s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0027s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499419548 AND ( deadline = 0 OR deadline > 1499419548 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `category` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0033s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.530130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001868s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.334828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012408s ]
+
+[ 2017-07-07T17:27:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001209s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.034559s ]
+INFO: [ app_init ] --END-- [ RunTime:0.054056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019847s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0286s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0311s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0298s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499419673 AND ( deadline = 0 OR deadline > 1499419673 ) ORDER BY `id` DESC  [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005923s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015909s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0209s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0035s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003928s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.742907s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.241106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.251015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013230s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0031s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499419673 AND ( deadline = 0 OR deadline > 1499419673 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0035s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.489422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.251015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002050s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.236209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013307s ]
+
+[ 2017-07-07T19:08:51+08:00 ] 127.0.0.1 /index.php
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0249s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0231s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1499425729 AND ( deadline = 0 OR deadline > 1499425729 ) ORDER BY `id` DESC  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004807s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015393s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0493s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0031s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004566s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.682409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.186278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012229s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0022s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1499425729 AND ( deadline = 0 OR deadline > 1499425729 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0028s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.449668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001762s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.251128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017175s ]
+
+[ 2017-07-07T19:08:57+08:00 ] 127.0.0.1 /index.php?s=/Home/Article/lists/category/default_blog.html
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0229s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `category` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0276s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 2 AND `create_time` < 1499425735 AND ( deadline = 0 OR deadline > 1499425735 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.018383s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0259s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0030s ]
+SQL: SELECT `pid` FROM `category` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `category` WHERE `pid` = 1 AND `status` = 1 ORDER BY `sort`  [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.600376s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.235871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.243751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012552s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 2 AND `create_time` < 1499425735 AND ( deadline = 0 OR deadline > 1499425735 ) LIMIT 1   [ RunTime:0.0031s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.368850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.243751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003202s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.124320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020212s ]
+

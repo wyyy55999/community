@@ -3,15 +3,46 @@
 当基础模型类无法满足我们的需求时，也就是不止增删改查，就使用D方法
 如果找不到自定义模型类，就会去找基础模型类
 
+2）调用通知的图片
+{:get_cover($notice['cover_id'],$field=path)}
+
+3）开启调试功能
+
+4）打印sql     $Member->_sql();
 
 
-<script type="text/javascript">
-                    $('#upload_button').uploadify({
-                        'swf'      : '/Public/static/uploadify/uploadify.swf',
-                        'uploader' : '/Application/Admin/uploadify',//这个就是处理上传文件的地址
-                        'buttonText' : '上传照片',
-                        'onUploadSuccess' : function(file, data, response) {
-                            data.trim();//这个是文件在服务器上的路径，如果是图片，可以使用src
-                        }
-                    });
-                </script>
+
+
+
+1.Mantis上提交昨天完成情况，及使用到的知识点
+2.将代码提交到码市（http://coding.net）或者github上面
+3.完成小区租售管理添加和修改的自动完成和自动验证，并且使用分页工具实现分页
+4.完成前台登录页面，将页面修改为适屏即可
+5.完成前台小区租售和小区通知模块，详见需求文档
+6.完成便民服务模块，详见需求文档（今日可选）
+1.2.目标
+1.任何用户提交参数都是不可信的，需要前后台都进行验证。而我们作为后台开发人员，后台验证必不可少。
+2.完成前台内容功能，学会使用ajax技术。
+1.3.可预见性的问题
+1.文件命名错误，XxxModel.class.php XxxController.class.php
+2.自动验证和自动完成都是在使用create方法后自动执行  load()
+3.I方法
+ D方法
+M 方法
+4.分页是无论pc应用还是移动应用都有，查看TP手册简单易会
+
+
+1.4.	求助经理
+Mantis备注格式
+1.问题描述xxxxx
+2.如果问题是英文，将英文翻译成中文
+3.用自己语言解释中文含义
+4.TP手册中关键字搜索结果
+5.百度搜索结果
+6.某某同学解释
+
+
+
+3.作业
+1.使用TP自带的页面静态化将登录页面静态化
+2.  手写TP中的URL模式，至少300字以上。手写TP中create方法是使用方式。

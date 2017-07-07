@@ -40,8 +40,8 @@
 						<td>{$rental.title}</td>
 						<td>{:$rental['type']?'出售':'出租'}</td>
 						<td>{$rental.price}{$rental.price_suffix}</td>
-						<td><span>{$rental.create_time|time_format}</span></td>
-						<td><span>{$rental.end_time|time_format}</span></td>
+						<td><span>{$rental.create_at|time_format}</span></td>
+						<td><span>{$rental.end_at}</span></td>
 						<td>{:$rental['status']?'已租/售':'未租/售'}</td>
 						<td>
 							<a title="编辑" href="{:U('edit?id='.$rental['id'])}">编辑</a>
@@ -55,6 +55,7 @@
 				</notempty>
 			</tbody>
 		</table>
+		<div class="result page">{$page}</div>
 	</div>
 </block>
 

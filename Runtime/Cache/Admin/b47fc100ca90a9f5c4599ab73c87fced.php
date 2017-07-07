@@ -123,8 +123,8 @@
 						<td><?php echo ($rental["title"]); ?></td>
 						<td><?php echo $rental['type']?'出售':'出租';?></td>
 						<td><?php echo ($rental["price"]); echo ($rental["price_suffix"]); ?></td>
-						<td><span><?php echo (time_format($rental["create_time"])); ?></span></td>
-						<td><span><?php echo (time_format($rental["end_time"])); ?></span></td>
+						<td><span><?php echo (time_format($rental["create_at"])); ?></span></td>
+						<td><span><?php echo ($rental["end_at"]); ?></span></td>
 						<td><?php echo $rental['status']?'已租/售':'未租/售';?></td>
 						<td>
 							<a title="编辑" href="<?php echo U('edit?id='.$rental['id']);?>">编辑</a>
@@ -136,6 +136,7 @@
 				<td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
 			</tbody>
 		</table>
+		<div class="result page"><?php echo ($page); ?></div>
 	</div>
 
         </div>

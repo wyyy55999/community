@@ -12,6 +12,7 @@
  * 所有系统级别的配置
  */
 return array(
+    'SHOW_PAGE_TRACE'=>true,  //开启页面tarce功能
     /* 模块相关配置 */
     'AUTOLOAD_NAMESPACE' => array('Addons' => ONETHINK_ADDON_PATH), //扩展模块列表
     'DEFAULT_MODULE'     => 'Home',
