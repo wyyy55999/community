@@ -1,0 +1,769 @@
+[ 2017-07-07T09:27:27+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002506s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.276088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.452312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043366s ]
+
+[ 2017-07-07T09:27:28+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001276s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022893s ]
+INFO: [ app_init ] --END-- [ RunTime:0.036067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.056476s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.067321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.284190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.290778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.035973s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.043088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012834s ]
+
+[ 2017-07-07T09:27:31+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002095s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.029534s ]
+INFO: [ app_init ] --END-- [ RunTime:0.048465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015054s ]
+
+[ 2017-07-07T09:28:22+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001227s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021442s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009414s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0736s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0661s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0274s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1499390901','Administrator在2017-07-07 09:28登录了后台') [ RunTime:0.0405s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0017s ]
+NOTIC: [8] Undefined offset: 1 D:\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\server\onethink\wwwroot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1499304501 LIMIT 1   [ RunTime:0.0656s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1499390901',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0198s ]
+
+[ 2017-07-07T09:28:25+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001669s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020761s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011655s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0582s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0144s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004583s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011775s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `addons` [ RunTime:0.0442s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member` LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0204s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0406s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document` LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0303s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `category` LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0681s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `model` LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.831141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.120340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011474s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.679628s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006381s ]
+INFO: [ template_filter ] --END-- [ RunTime:-1.432812s ]
+SQL: select version() as v; [ RunTime:0.0222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.185990s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.458192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001764s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.643700s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.649469s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004526s ]
+INFO: [ template_filter ] --END-- [ RunTime:-1.654938s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081498s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.726277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001829s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.803314s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.156877s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:1.501014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.117964s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.726277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001851s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.839518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.029500s ]
+
+[ 2017-07-07T09:28:33+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001314s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.028241s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011452s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0211s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0027s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Rental/index%' ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0158s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0028s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = ' 物业管理' AND `pid` = 124 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0256s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0259s ]
+SQL: SELECT * FROM `rental` WHERE `status` > -1  [ RunTime:0.0042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004574s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012309s ]
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.334785s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.343676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.027024s ]
+
+[ 2017-07-07T09:28:47+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001244s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011907s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0205s ]
+SQL: SELECT * FROM `rental` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004776s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012383s ]
+NOTIC: [8] Undefined variable: meta_title D:\server\onethink\wwwroot\Runtime\Cache\Admin\670f94a36843ecb19363671967fb77d7.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.850232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.857072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012080s ]
+
+[ 2017-07-07T09:29:53+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001199s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008693s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0383s ]
+SQL: UPDATE `rental` SET `publisher`='赵六',`tel`='1578545862',`title`='套三出租',`type`='0',`price`='34.00',`price_suffix`='万元',`image_path`='./Uploads/Picture/room/2017/07/06/595e520acfe04.jpg',`description`='<p>出租出租出租出租出租出租出租出租出租出租</p><p><img src=\"http://www.community.com/Public/static/ueditor/php/upload/20170706/14993536214752.jpg\" title=\"cat2.jpg\"/></p>',`end_at`='0' WHERE `id` = 10 [ RunTime:0.0962s ]
+
+[ 2017-07-07T09:29:57+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001254s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021681s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010971s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0224s ]
+SQL: SELECT * FROM `rental` WHERE `status` > -1  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004431s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011585s ]
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.306446s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.313658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017292s ]
+
+[ 2017-07-07T09:30:13+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001183s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020341s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012005s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0229s ]
+SQL: SELECT * FROM `rental` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004901s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012324s ]
+NOTIC: [8] Undefined variable: meta_title D:\server\onethink\wwwroot\Runtime\Cache\Admin\670f94a36843ecb19363671967fb77d7.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.866669s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.875545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.030215s ]
+
+[ 2017-07-07T09:30:27+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001247s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020394s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009570s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0262s ]
+SQL: UPDATE `rental` SET `publisher`='赵六',`tel`='18245865215',`title`='套三出租',`type`='0',`price`='34.00',`price_suffix`='元/月',`image_path`='./Uploads/Picture/room/2017/07/06/595e520acfe04.jpg',`description`='<p>出租出租出租出租出租出租出租出租出租出租</p><p><img src=\"http://www.community.com/Public/static/ueditor/php/upload/20170706/14993536214752.jpg\" title=\"cat2.jpg\"/></p>',`end_at`='0' WHERE `id` = 10 [ RunTime:0.1336s ]
+
+[ 2017-07-07T09:30:31+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001527s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.025944s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017116s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0231s ]
+SQL: SELECT * FROM `rental` WHERE `status` > -1  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011490s ]
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.341798s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.348931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005982s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016286s ]
+
+[ 2017-07-07T09:32:26+08:00 ] 127.0.0.1 /admin.php?s=/Rental/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001314s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022221s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012258s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011398s ]
+NOTIC: [8] Undefined variable: meta_title D:\server\onethink\wwwroot\Runtime\Cache\Admin\670f94a36843ecb19363671967fb77d7.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.885772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.892811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.023587s ]
+
+[ 2017-07-07T09:32:40+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001243s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.019994s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011407s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `rental` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012004s ]
+NOTIC: [8] Undefined variable: meta_title D:\server\onethink\wwwroot\Runtime\Cache\Admin\670f94a36843ecb19363671967fb77d7.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.828054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.835334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024149s ]
+
+[ 2017-07-07T09:33:18+08:00 ] 127.0.0.1 /admin.php?s=/rental/uploadify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001197s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020178s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032785s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010561s ]
+NOTIC: [8] Use of undefined constant uniqid - assumed 'uniqid' D:\server\onethink\wwwroot\Application\Admin\Controller\RentalController.class.php 第 84 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\server\onethink\wwwroot\ThinkPHP\Library\Think\Upload.class.php 第 182 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014757s ]
+
+[ 2017-07-07T09:33:41+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001157s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022288s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009527s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0188s ]
+SQL: UPDATE `rental` SET `publisher`='张飞',`tel`='15784586235',`title`='出售别墅',`type`='0',`price`='213.00',`price_suffix`='万元',`image_path`='./Uploads/Picture/room/2017/07/07/595ee4de472a2.jpg',`description`='<p>出售出售出售</p><p><img src=\"http://www.community.com/Public/static/ueditor/php/upload/20170707/14993912174560.jpg\" title=\"cat3.jpg\"/></p>',`end_at`='0' WHERE `id` = 6 [ RunTime:0.1141s ]
+
+[ 2017-07-07T09:33:44+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001210s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.024327s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012149s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0207s ]
+SQL: SELECT * FROM `rental` WHERE `status` > -1  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011821s ]
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.301277s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.308790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012960s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013343s ]
+
+[ 2017-07-07T09:33:50+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001497s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021689s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015369s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `rental` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011797s ]
+NOTIC: [8] Undefined variable: meta_title D:\server\onethink\wwwroot\Runtime\Cache\Admin\670f94a36843ecb19363671967fb77d7.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.925970s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.933084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004994s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012496s ]
+
+[ 2017-07-07T09:33:56+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001064s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.019835s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008608s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0189s ]
+SQL: UPDATE `rental` SET `publisher`='张飞',`tel`='15784586235',`title`='出售别墅',`type`='1',`price`='213.00',`price_suffix`='元/月',`image_path`='./Uploads/Picture/room/2017/07/07/595ee4de472a2.jpg',`description`='<p>出售出售出售</p><p><img src=\"http://www.community.com/Public/static/ueditor/php/upload/20170707/14993912174560.jpg\" title=\"cat3.jpg\"/></p>',`end_at`='0' WHERE `id` = 6 [ RunTime:0.0841s ]
+
+[ 2017-07-07T09:34:00+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001187s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020532s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033005s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012635s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0199s ]
+SQL: SELECT * FROM `rental` WHERE `status` > -1  [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012743s ]
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.338346s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.345970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014671s ]
+
+[ 2017-07-07T09:34:36+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001216s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010947s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0229s ]
+SQL: SELECT * FROM `rental` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011705s ]
+NOTIC: [8] Undefined variable: meta_title D:\server\onethink\wwwroot\Runtime\Cache\Admin\670f94a36843ecb19363671967fb77d7.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.809187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.816435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014098s ]
+
+[ 2017-07-07T09:34:42+08:00 ] 127.0.0.1 /admin.php?s=/Rental/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001176s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.020259s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008939s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0197s ]
+SQL: UPDATE `rental` SET `publisher`='张飞',`tel`='15784586235',`title`='出售别墅',`type`='1',`status`='1',`price`='213.00',`price_suffix`='元/月',`image_path`='./Uploads/Picture/room/2017/07/07/595ee4de472a2.jpg',`description`='<p>出售出售出售</p><p><img src=\"http://www.community.com/Public/static/ueditor/php/upload/20170707/14993912174560.jpg\" title=\"cat3.jpg\"/></p>',`end_at`='0' WHERE `id` = 6 [ RunTime:0.0752s ]
+
+[ 2017-07-07T09:34:45+08:00 ] 127.0.0.1 /admin.php?s=/Rental/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001270s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022184s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012367s ]
+SQL: SHOW COLUMNS FROM `rental` [ RunTime:0.0207s ]
+SQL: SELECT * FROM `rental` WHERE `status` > -1  [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.016860s ]
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined index: create_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 126 行.
+NOTIC: [8] Undefined index: end_time D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 127 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+NOTIC: [8] Undefined variable: channel D:\server\onethink\wwwroot\Runtime\Cache\Admin\b47fc100ca90a9f5c4599ab73c87fced.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.282730s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.289729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012599s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017289s ]
+
+[ 2017-07-07T10:21:11+08:00 ] 127.0.0.1 /admin.php?s=/Rental/sort.html/ids/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001418s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022885s ]
+INFO: [ app_init ] --END-- [ RunTime:0.038130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011897s ]
+ERR: 非法操作:sort.html
+

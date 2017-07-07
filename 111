@@ -1,0 +1,17 @@
+1）D方法和M方法的区别：
+只需要增删改查时，使用M方法
+当基础模型类无法满足我们的需求时，也就是不止增删改查，就使用D方法
+如果找不到自定义模型类，就会去找基础模型类
+
+
+
+<script type="text/javascript">
+                    $('#upload_button').uploadify({
+                        'swf'      : '/Public/static/uploadify/uploadify.swf',
+                        'uploader' : '/Application/Admin/uploadify',//这个就是处理上传文件的地址
+                        'buttonText' : '上传照片',
+                        'onUploadSuccess' : function(file, data, response) {
+                            data.trim();//这个是文件在服务器上的路径，如果是图片，可以使用src
+                        }
+                    });
+                </script>
