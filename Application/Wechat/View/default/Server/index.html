@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/Public/Wechat/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/Wechat/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .main{margin-bottom: 60px;}
+        .indexLabel{padding: 10px 0; margin: 10px 0 0; color: #fff;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--导航部分-->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+            <div class="col-xs-3">
+                <p class="navbar-text"><a href="index.html" class="navbar-link">首页</a></p>
+            </div>
+            <div class="col-xs-3">
+                <p class="navbar-text"><a href="#" class="navbar-link">服务</a></p>
+            </div>
+            <div class="col-xs-3">
+                <p class="navbar-text"><a href="#" class="navbar-link">发现</a></p>
+            </div>
+            <div class="col-xs-3">
+                <p class="navbar-text"><a href="#" class="navbar-link">我的</a></p>
+            </div>
+        </div>
+    </nav>
+    <!--导航结束-->
+
+    <div class="container-fluid">
+        <div id="father">
+        <notempty name="list">
+            <volist name="list" id="server">
+                <div class="row noticeList">
+                    <a href="{:U('Server/detail',array('id'=>$server['id']))}" class="view_count" data-id="{$server.id}">
+                        <div class="col-xs-2">
+                            <img class="noticeImg" src="{:get_cover($server['cover_id'],$field=path)}" />
+                        </div>
+                        <div class="col-xs-10">
+                            <p class="title">{$server.title}</p>
+                            <p class="intro">{$server.description}</p>
+                            <p class="info">浏览: <span class="view_count_p">{$server.view} </span><span class="pull-right">{$server.create_time|time_format}</span> </p>
+                        </div>
+                    </a>
+                </div>
+            </volist>
+            <else/>
+            aOh! 暂时还没有内容!
+        </notempty>
+        </div>
+    </div>
+    <div class="text-center" style="margin-top: 10px;">
+        <button id="load_more_button" class="btn btn-info ajax-page"> 加载更多 </button>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Public/Wechat/js/jquery-1.11.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/Public/Wechat/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    //加载更多
+    //start  起始下标(从第一条开始)
+    var now_start = 2;
+    $('#load_more_button').on('click',function(){
+        //发送ajax请求
+        $.post('/wechat.php/Server/index.html',{'start':now_start},function(data) {
+            if(data.length == 0){
+                $('#load_more_button').text('没有更多数据啦~');
+                return;
+            }else {
+                var html = '';
+                $(data).each(function (i,v) {
+                    html += '<div class="row noticeList">\
+                    <a href="/wechat.php/Server/detail/id/'+ v.id +'.html" class="view_count" data-id="'+ v.id +'">\
+                    <div class="col-xs-2">\
+                    <img class="noticeImg" src="'+ v.path +'" />\
+                    </div>\
+                    <div class="col-xs-10">\
+                    <p class="title">'+ v.title +'</p>\
+                <p class="intro">'+ v.description +'</p>\
+                <p class="info">浏览: <span class="view_count_p"></span>'+ v.view +'<span class="pull-right">'+ changeTime(v.create_time,true) +'</span> </p>\
+                </div>\
+                </a>\
+                </div>';
+                });
+                $(html).appendTo('#father');
+            }
+        });
+        now_start = parseInt(now_start + 2);
+    });
+
+
+    //浏览量
+    $('#father').on('click','.view_count',function () {
+        var current_view = $(this).find('.view_count_p').text();
+        var current_document_id = $(this).attr('data-id');
+        var url = '/wechat.php/Server/view/id/'+ current_document_id +'.html';
+        $.getJSON(url,function (response) {
+            console.debug(response);
+        });
+    });
+
+
+    //转换时间戳
+    function changeTime(unixTime, isFull, timeZone) {
+        if (typeof (timeZone) == 'number')
+        {
+            unixTime = parseInt(unixTime) + parseInt(timeZone) * 60 * 60;
+        }
+        var time = new Date(unixTime * 1000);
+        var ymdhis = "";
+        ymdhis += time.getUTCFullYear() + "-";
+        ymdhis += (time.getUTCMonth()+1) + "-";
+        ymdhis += time.getUTCDate();
+        if (isFull === true)
+        {
+            ymdhis += " " + time.getUTCHours() + ":";
+            ymdhis += time.getUTCMinutes() + ":";
+            ymdhis += time.getUTCSeconds();
+        }
+        return ymdhis;
+    }
+</script>
+</body>
+</html>

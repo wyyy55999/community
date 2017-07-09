@@ -100,7 +100,7 @@ class RentalController extends AdminController
                     //返回文件在服务器上的路径
                     $fileArray = $upload->rootPath . $file['savepath'] . $file['savename'];
                 }
-                echo trim($fileArray);
+                echo trim(ltrim($fileArray,'.'));
             }
         }
     }

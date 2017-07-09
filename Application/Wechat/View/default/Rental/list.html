@@ -86,7 +86,7 @@
                                         <h4>{$sale.title}</h4>
                                         <p class="zushouInfo">{$sale.intro}</p>
                                         <p class="text-danger">{$sale.price}{$sale.price_suffix}</p>
-                                        <p><a href="{:U('detail?id='.$sale['id'])}" class="btn btn-danger zushouBtn">详细信息</a> </p>
+                                        <p><a href="{:U('detail',array('id'=>$sale['id']))}" class="btn btn-danger zushouBtn">详细信息</a> </p>
                                     </div>
                                 </div>
                             </div>

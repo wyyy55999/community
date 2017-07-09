@@ -48,8 +48,8 @@
             <div class="controls">
                 <input type="text" class="text input-large" name="price" value="{$info.price|default=''}">
                 <select name="price_suffix">
-                    <option value="元/月">元/月</option>
-                    <option value="万元">万元</option>
+                    <option value="元/月" <eq name="info.price_suffix" value="元/月" >selected</eq>>元/月</option>
+                    <option value="万元" <eq name="info.price_suffix" value="万元" >selected</eq>>万元</option>
                 </select>
             </div>
         </div>

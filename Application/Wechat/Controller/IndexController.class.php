@@ -18,7 +18,7 @@ class IndexController extends HomeController {
 
 	//Wechat系统首页(默认访问)
     public function index(){
-        echo '写上地址参数';
+        $this->display('wechat');
     }
 
 }
